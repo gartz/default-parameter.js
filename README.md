@@ -1,4 +1,7 @@
-# default-parameter.js
+default-parameter.js
+====================
+
+A experimental default values for function parameters in Javascript, that just uses arguments.callee and arguments.caller
 
 This is just an *experimental* project, that shows how `arguments.callee` and `arguments.caller`
 could be used in real world applications to make programmers life easier.
@@ -9,7 +12,8 @@ of the function, this way we could create very powerfull stuffs like this projec
 The ideia is to have a function that goes inside any function, and you can easy create
 default values for the function parameters.
 
-## Example
+Example
+-------
 
 ```
 function abc(a, b, c){
@@ -33,6 +37,7 @@ abc(null, {e:'e'});
 // [null, { e:'e', f:2, g:3 }, "c"]
 ```
 
-## Compatibility
+Compatibility
+-------------
 
 Any browser if you don't use strict mode.
