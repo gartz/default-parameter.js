@@ -12,6 +12,25 @@ of the function, this way we could create very powerfull stuffs like this projec
 The ideia is to have a function that goes inside any function, and you can easy create
 default values for the function parameters.
 
+Usage
+-----
+
+To use you need to wrap 3 lines code in any function:
+
+```
+if(arguments.length < arguments.callee.length){
+  return defaults.call(this, /* default values, separeted by comma */);
+}
+```
+
+Or you can use an array as second parameter using `apply` instead `call`.
+
+```
+if(arguments.length < arguments.callee.length){
+  return defaults.apply(this, /* default values in array [arg1, arg2, arg3...] */);
+}
+```
+
 Example
 -------
 
